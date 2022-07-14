@@ -144,6 +144,11 @@ function nextRound(game) {
   isA(firstCard2);
   game.playerCards.push(firstCard2);
   liCard1.innerText = firstCard2.suit + firstCard2.pip;
+  if (firstCard2.suit == "♥" || firstCard2.suit == "♦") {
+    liCard1.style.color = "#a00808";
+  } else {
+    liCard1.style.color = "#fff";
+  }
   console.log(game.playerCards);
   console.log("____________________________");
 
@@ -152,6 +157,11 @@ function nextRound(game) {
   game.playerCards.push(secondCard2);
   console.log(game.playerCards);
   liCard2.innerText = secondCard2.suit + secondCard2.pip;
+  if (secondCard2.suit == "♥" || secondCard2.suit == "♦") {
+    liCard2.style.color = "#a00808";
+  } else {
+    liCard2.style.color = "#fff";
+  }
 
   console.log("____________________________");
 
@@ -176,8 +186,11 @@ function startGame() {
   isA(firstCard);
   game.playerCards.push(firstCard);
   console.log(game.playerCards);
-
   liCard1.innerText = firstCard.suit + firstCard.pip;
+
+  if (firstCard.suit == "♥" || firstCard.suit == "♦") {
+    liCard1.style.color = "#a00808";
+  }
   console.log("____________________________");
 
   const secondCard = selectCard(game.playerCards);
@@ -185,6 +198,9 @@ function startGame() {
   game.playerCards.push(secondCard);
   console.log(game.playerCards);
   liCard2.innerText = secondCard.suit + secondCard.pip;
+  if (secondCard.suit == "♥" || secondCard.suit == "♦") {
+    liCard2.style.color = "#a00808";
+  }
   console.log("____________________________");
 
   game.sum = firstCard.value + secondCard.value;

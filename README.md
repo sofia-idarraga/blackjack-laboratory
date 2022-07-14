@@ -2,8 +2,6 @@
 
 **_By: Sofía Idárraga_**
 
-_In Progress_
-
 ---
 
 ## Instructions
@@ -16,6 +14,7 @@ This activity finish the Blackjack activity adding the user visual interface. Th
 
 ### Using the code
 
-Once the complete code is downloaded, you just need to open the .html file in your browser
+First, download the complete code, then you just need to open the .html file in your browser and start playing.
 
 ## Evidence
+- [Youtube](https://www.youtube.com/watch?v=p2S4asQ15n4) - Blackjack Laboratory Solution

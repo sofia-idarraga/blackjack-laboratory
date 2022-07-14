@@ -21,7 +21,13 @@ button{
     font-size: 16px;
     padding: 10px;
     list-style-type: none;
-    
+}
+
+button:hover{
+    background-color:#95b46a;
+    border: 2px solid #709255;
+    box-shadow: 3px 4px 7px #3E5622 ;
+    overflow:hidden;
 }
 
 .header{
@@ -89,3 +95,4 @@ li{
     list-style-type: none;
     
 }
+

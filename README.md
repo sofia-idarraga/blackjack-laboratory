@@ -17,4 +17,4 @@ This activity finish the Blackjack activity adding the user visual interface. Th
 First, download the complete code, then you just need to open the .html file in your browser and start playing.
 
 ## Evidence
-- [Youtube](https://www.youtube.com/watch?v=p2S4asQ15n4) - Blackjack Laboratory Solution
+- [Youtube](https://youtu.be/4ZkK2zRB1Mk) - Blackjack Laboratory Solution

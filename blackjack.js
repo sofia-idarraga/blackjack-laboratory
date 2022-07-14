@@ -50,10 +50,12 @@ class Game {
   checkWin() {
     if (this.sum >= 18 && this.sum <= 21) {
       console.log("You win! ");
+      resultMessage.classList.replace("winner-hidden", "winner");
       resultMessage.innerText = "You win! ";
       return true;
     }
     console.log("You lose! ");
+    resultMessage.classList.replace("winner-hidden", "winner");
     resultMessage.innerText = "You lose! ";
     return false;
   }
@@ -118,20 +120,19 @@ function selectCard(selectedCards) {
 
 const isA = (card) => {
   resultMessage.innerText = " ";
-  setTimeout(function () {
-    if (card.pip === "A") {
-      let input = prompt("Your A's value is 11 or 1? (11/1): ");
-      let entrance = Number(input);
-      while (entrance != 1 && entrance != 11) {
-        input = prompt(
-          "Your entrance is not valid, please write it again: (11/1)"
-        );
-        entrance = Number(input);
-      }
-      card.setValue(entrance);
-      console.log(card);
+
+  if (card.pip === "A") {
+    let input = prompt("Your A's value is 11 or 1? (11/1): ");
+    let entrance = Number(input);
+    while (entrance != 1 && entrance != 11) {
+      input = prompt(
+        "Your entrance is not valid, please write it again: (11/1)"
+      );
+      entrance = Number(input);
     }
-  }, 1000);
+    card.setValue(entrance);
+    console.log(card);
+  }
 };
 
 function nextRound(game) {
@@ -156,11 +157,12 @@ function nextRound(game) {
 
   game.sum = firstCard2.value + secondCard2.value;
   console.log("Your sum is: " + game.sum);
-  sumMessage.innerText = "Your sum is: $" + game.sum;
+  sumMessage.innerText = `Your sum is: ${game.sum}`;
   let win = game.checkWin();
   game.checkSum(win);
   console.log("You gain: " + game.gain);
   gainMessage.innerText = "Your gain is: $" + game.gain;
+
   return win;
 }
 
@@ -176,7 +178,7 @@ function startGame() {
   console.log(game.playerCards);
 
   liCard1.innerText = firstCard.suit + firstCard.pip;
-
+  s;
   console.log("____________________________");
 
   const secondCard = selectCard(game.playerCards);
@@ -188,7 +190,7 @@ function startGame() {
 
   game.sum = firstCard.value + secondCard.value;
   console.log("Your sum is: " + game.sum);
-  sumMessage.innerText = "Your sum is: $" + game.sum;
+  sumMessage.innerText = "Your sum is: " + game.sum;
   let win = game.checkWin();
   game.checkSum(win);
   console.log("You gain: " + game.gain);
@@ -213,7 +215,7 @@ function startGame() {
         return;
       }
     }
-  }, 1000);
+  }, 500);
 
   console.log("____________________________");
 

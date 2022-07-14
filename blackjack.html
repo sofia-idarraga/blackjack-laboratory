@@ -5,37 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         <title>Blackjack</title>
         <link rel="stylesheet" href="style.css"/>
-      </head>
+    </head>
 
-      <body>
+    <body>
         <header class="header" >
             <div>
             <img src="images/blackjack.png" width="300" > 
             </div>              
         </header>
 
-        <div>
-            <p id="gain">Your gain is: $0 </p>
-        </div>
+        <article class = "content">
+            <div>
+                <p id="gain" >Your gain is: $0 </p>
+            </div>
 
-        <div >
-            <ul id="cards" >
-                <li id="first-card"></li>
-                <li id="second-card"></li>
-                <li id="sum"></li>
-            </ul>
-            <p id="result-message"></p>    
-        </div>
+            <div >
+                <ul id="cards" >
+                    <li id="first-card"></li>
+                    <li id="second-card"></li>
+                    <li id="sum"></li>
+                </ul>
+                <h2 id="result-message" class="winner-hidden"></h2>    
+            </div>
 
-        <div class="button-box">
-            <ul>
-            
-                <li><button id="start-button" class="start-button">Start New Game</button></li>
-            
-                <li><button id="refresh-button" class="refresh-button">Exit Game</button></li>
-
-            </ul>
-        </div>
+            <div class="button-box">
+                         
+                    <button id="start-button" class="start-button">Start New Game</button></li>
+                    <br>
+                    <button id="refresh-button" class="refresh-button">Exit Game</button></li>
+                
+            </div>
+        </article>
         <script src="blackjack.js"></script>
-      </body>
+    </body>
 </html>

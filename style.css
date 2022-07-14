@@ -1,6 +1,9 @@
 body{
     background-color: #83781b;
-    font-family: Verdana, sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
     align-items: center;
     justify-content: center;
     width:1000px;
@@ -8,17 +11,49 @@ body{
     text-align: center;
 }
 
+button{
+    cursor: pointer;
+    background-color: #83781b;
+    border: 2px solid #83781b;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    list-style-type: none;
+    
+}
+
 .header{
     background-color: #3E5622;
+    box-shadow: 0px 0px 22px 12px #172815;
     border-radius: 5px;
     padding: 10px 40px;
     width: 400px;
+    margin: 1em auto 2em;
+    
+}
+
+.content{
+    background-color: #709255;
+    border-radius: 10px;
+    box-shadow: 0 4px 7px #3E5622;
+    width: 400px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 20px 40px;
+}
+
+.winner{
+    background-color: #95b46a;
+    border-radius: 5px;
+    padding: 10px 40px;
     margin: 0 auto;
 }
 
-h1{
-    color: #172815;
- }
+.winner-hidden{
+    visibility:collapse;
+}
 
 .start-button-dissable{
     visibility:collapse;
@@ -29,11 +64,22 @@ h1{
     visibility:collapse;
 }
 
+.again-button{
+    visibility:collapse;
+}
+
 .refresh-button-visible{
     visibility: visible;
 }
 
+.again-button-visible{
+    visibility: visible;
+}
 
+ul{
+    padding-left:0;
+}
 li{
     list-style-type: none;
+    
 }

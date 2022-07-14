@@ -8,10 +8,11 @@
       </head>
 
       <body>
-        <div class="title">
-            <h1>Blackjack</h1>
-        </div>
-
+        <header class="header" >
+            <div>
+            <img src="images/blackjack.png" width="300" > 
+            </div>              
+        </header>
 
         <div>
             <p id="gain">Your gain is: $0 </p>
@@ -26,9 +27,14 @@
             <p id="result-message"></p>    
         </div>
 
-        <div>
-            <button id="start-button" class="start-button">Start New Game</button>
-            <button id="refresh-button" class="refresh-button">Exit Game</button>
+        <div class="button-box">
+            <ul>
+            
+                <li><button id="start-button" class="start-button">Start New Game</button></li>
+            
+                <li><button id="refresh-button" class="refresh-button">Exit Game</button></li>
+
+            </ul>
         </div>
         <script src="blackjack.js"></script>
       </body>

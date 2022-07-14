@@ -1,11 +1,32 @@
+body{
+    background-color: #83781b;
+    font-family: Verdana, sans-serif;
+    align-items: center;
+    justify-content: center;
+    width:1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header{
+    background-color: #3E5622;
+    border-radius: 5px;
+    padding: 10px 40px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+h1{
+    color: #172815;
+ }
 
 .start-button-dissable{
-    visibility:hidden;
+    visibility:collapse;
     
 }
 
 .refresh-button{
-    visibility:hidden;
+    visibility:collapse;
 }
 
 .refresh-button-visible{

@@ -1,13 +1,23 @@
 //---------------------------
 
-document.getElementById("start-button").addEventListener("click", startGame);
-
 let ulCards = document.getElementById("cards");
-
 let liCard1 = document.getElementById("first-card");
 let liCard2 = document.getElementById("second-card");
+let sumMessage = document.getElementById("sum");
 let resultMessage = document.getElementById("result-message");
+let gainMessage = document.getElementById("gain");
+let refresh = document.getElementById("refresh-button");
+let startButton = document.getElementById("start-button");
 
+refresh.addEventListener("click", (_) => {
+  location.reload();
+});
+
+startButton.addEventListener("click", () => {
+  refresh.classList.replace("refresh-button", "refresh-button-visible");
+  startButton.classList.replace("start-button", "start-button-dissable");
+  startGame();
+});
 //-------------------
 
 class Card {
@@ -113,7 +123,9 @@ const isA = (card) => {
       let input = prompt("Your A's value is 11 or 1? (11/1): ");
       let entrance = Number(input);
       while (entrance != 1 && entrance != 11) {
-        input = prompt("Your entrance is not valid, please write it again: ");
+        input = prompt(
+          "Your entrance is not valid, please write it again: (11/1)"
+        );
         entrance = Number(input);
       }
       card.setValue(entrance);
@@ -144,9 +156,11 @@ function nextRound(game) {
 
   game.sum = firstCard2.value + secondCard2.value;
   console.log("Your sum is: " + game.sum);
+  sumMessage.innerText = "Your sum is: $" + game.sum;
   let win = game.checkWin();
   game.checkSum(win);
   console.log("You gain: " + game.gain);
+  gainMessage.innerText = "Your gain is: $" + game.gain;
   return win;
 }
 
@@ -174,17 +188,20 @@ function startGame() {
 
   game.sum = firstCard.value + secondCard.value;
   console.log("Your sum is: " + game.sum);
+  sumMessage.innerText = "Your sum is: $" + game.sum;
   let win = game.checkWin();
   game.checkSum(win);
   console.log("You gain: " + game.gain);
+  gainMessage.innerText = "Your gain is: $" + game.gain;
 
   setTimeout(function () {
     while (win) {
       let input = prompt("Do you wanna continue playing?: (Y/N) ");
 
       while (input.toUpperCase() != "Y" && input.toUpperCase() != "N") {
-        console.log("Invalid input. ");
-        linput = prompt("Do you wanna continue playing?: (Y/N) ");
+        input = prompt(
+          " Invalid input. Do you wanna continue playing?: (Y/N) "
+        );
       }
       if (input.toUpperCase() === "Y") {
         win = nextRound(game);

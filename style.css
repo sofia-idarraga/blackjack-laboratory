@@ -1,11 +1,17 @@
 
-.cards-hidden {
-    visibility: collapse;
+.start-button-dissable{
+    visibility:hidden;
+    
 }
 
-.cards-visible {
+.refresh-button{
+    visibility:hidden;
+}
+
+.refresh-button-visible{
     visibility: visible;
 }
+
 
 li{
     list-style-type: none;

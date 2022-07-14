@@ -1,3 +1,15 @@
+//---------------------------
+
+document.getElementById("start-button").addEventListener("click", startGame);
+
+let ulCards = document.getElementById("cards");
+
+let liCard1 = document.getElementById("first-card");
+let liCard2 = document.getElementById("second-card");
+let resultMessage = document.getElementById("result-message");
+
+//-------------------
+
 class Card {
   constructor(pip, value) {
     this.pip = pip;
@@ -28,9 +40,11 @@ class Game {
   checkWin() {
     if (this.sum >= 18 && this.sum <= 21) {
       console.log("You win! ");
+      resultMessage.innerText = "You win! ";
       return true;
     }
     console.log("You lose! ");
+    resultMessage.innerText = "You lose! ";
     return false;
   }
 
@@ -93,6 +107,7 @@ function selectCard(selectedCards) {
 }
 
 const isA = (card) => {
+  resultMessage.innerText = " ";
   setTimeout(function () {
     if (card.pip === "A") {
       let input = prompt("Your A's value is 11 or 1? (11/1): ");
@@ -187,15 +202,3 @@ function startGame() {
 
   console.log("See ya next time ;)");
 }
-
-//---------------------------
-
-document.getElementById("start-button").addEventListener("click", startGame);
-
-let ulCards = document.getElementById("cards");
-
-let liCard1 = document.getElementById("first-card");
-let liCard2 = document.getElementById("second-card");
-
-ulCards.classList.remove("cards-hidden");
-ulCards.classList.add("cards-visible");

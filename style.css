@@ -1,0 +1,12 @@
+
+.cards-hidden {
+    visibility: collapse;
+}
+
+.cards-visible {
+    visibility: visible;
+}
+
+li{
+    list-style-type: none;
+}

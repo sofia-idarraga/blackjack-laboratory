@@ -161,7 +161,7 @@ function nextRound(game) {
   let win = game.checkWin();
   game.checkSum(win);
   console.log("You gain: " + game.gain);
-  gainMessage.innerText = "Your gain is: $" + game.gain;
+  gainMessage.innerText = "Your actual gain is: $" + game.gain;
 
   return win;
 }
@@ -178,7 +178,6 @@ function startGame() {
   console.log(game.playerCards);
 
   liCard1.innerText = firstCard.suit + firstCard.pip;
-  s;
   console.log("____________________________");
 
   const secondCard = selectCard(game.playerCards);
@@ -194,7 +193,7 @@ function startGame() {
   let win = game.checkWin();
   game.checkSum(win);
   console.log("You gain: " + game.gain);
-  gainMessage.innerText = "Your gain is: $" + game.gain;
+  gainMessage.innerText = "Your actual gain is: $" + game.gain;
 
   setTimeout(function () {
     while (win) {

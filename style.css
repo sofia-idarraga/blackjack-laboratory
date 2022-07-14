@@ -49,6 +49,8 @@ button{
     border-radius: 5px;
     padding: 10px 40px;
     margin: 0 auto;
+    color:#3E5622;
+    box-shadow: 0 2px 4px #3E5622;
 }
 
 .winner-hidden{
@@ -74,6 +76,10 @@ button{
 
 .again-button-visible{
     visibility: visible;
+}
+
+.card-box{
+    color:#fff;
 }
 
 ul{
